@@ -126,17 +126,18 @@ h2 {
 }
 
 /* Dropdown */
+/* Dropdown */
 .applianceSelect {
     appearance: none;
     -webkit-appearance: none;
     max-width: 100%;
-    flex: 1 1 180px;
+    flex: 0 1 230px;
     background-color: #ffffff;
     color: #333333;
     font-family: inherit;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
-    padding: 6px 32px 6px 12px;
+    padding: 6px 30px 6px 12px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -232,6 +233,7 @@ h2 {
 
     .applianceSelect {
         font-size: 16px;
-        width: 100%;
+        flex: 1 1 170px;
+        width: auto;
     }
 }
