@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="wattwiseLogo.png">
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="infoBanner.css">
+    <link rel="stylesheet" href="bodyStyle.css">
+    <link rel="stylesheet" href="resultStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="indexScript.js" defer></script>
+    <title>WattWise</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="wattwiseLogo.png" alt="WattWise Logo" class="logo-icon">
+            <h1>WattWise</h1>
+        </div>
+        <label class="theme-switch" for="darkModeToggle" title="Toggle dark mode">
+            <input type="checkbox" id="darkModeToggle" aria-label="Toggle dark mode">
+            <span class="theme-slider"></span>
+        </label>
+    </header>
+    <div id="infoBanner" class="info-banner" role="note">
+        <span>WattWise estimates your monthly electricity bill by room and appliance based on typical wattage ranges, daily hours/minutes, a 30-day month, and ~₱15.55/kWh—actual bills may vary depending on unit condition, thermostat/inverter duty cycles, and utility rate adjustments.</span>
+    </div>
+    <main>
+        <div id="roomInput">
+            <div id="roomControl">
+                <div id="roomTextContainer">
+                    <h2> Room </h2>
+                </div>
+                <div id="buttonContainer">
+                    <button class="removeButton clearAllButton" id="clearAllRooms" title="Remove all rooms">🗑</button>
+                    <button class="addButton" id="addRoom">+</button>
+                </div>
+            </div>
+            <div id="roomList">
+                
+            </div>
+        </div>
+        <div id="results">
+
+        </div>
+    </main>
+</body>
+
+</html>

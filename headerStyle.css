@@ -1,0 +1,157 @@
+/* Global reset & base typography */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+    color: #111317;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Header container */
+header {
+    background-color: rgb(233, 172, 59);
+    display: flex;
+    justify-content: space-between; /* Logo on left, switch on far right */
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    color: aliceblue;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: aliceblue;
+    display: inline-block;
+}
+
+.logo-link:hover {
+    opacity: 0.92;
+}
+
+/* Container wrapping the logo and text */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Pill Toggle Switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-slider {
+    position: absolute;
+    inset: 0;
+    background-color: #111317;
+    border-radius: 999px;
+    transition: background-color 0.25s ease;
+}
+
+.theme-slider::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+/* Knob on the right when checked (dark mode active) */
+.theme-switch input:checked + .theme-slider {
+    background-color: #0b0d10;
+}
+
+.theme-switch input:checked + .theme-slider::before {
+    transform: translate(28px, -50%);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: #14171c;
+    color: #f1f5f9;
+}
+
+body.dark-mode header {
+    background-color: #1f242d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode #roomInput,
+body.dark-mode #results {
+    background-color: #222731;
+}
+
+body.dark-mode #roomControl,
+body.dark-mode .roomStyle,
+body.dark-mode .applianceList,
+body.dark-mode .chartWrapper,
+body.dark-mode .roomResultCard {
+    background-color: #2d3340;
+}
+
+body.dark-mode .applianceItem {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .applianceSelect,
+body.dark-mode .timeInput {
+    background-color: #191d24;
+    color: #f1f5f9;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+body.dark-mode .applianceSelect option {
+    background-color: #191d24;
+    color: #f1f5f9;
+}
+
+@media (max-width: 1300px) {
+    header {
+        padding: 8px 15px;
+    }
+
+    .logo-icon {
+        height: 32px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+}
